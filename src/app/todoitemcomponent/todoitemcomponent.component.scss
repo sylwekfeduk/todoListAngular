@@ -1,0 +1,198 @@
+.container {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 15px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: white;
+    border-radius: 100%;
+    border: solid black;
+    border-width: 1px;
+  }
+  
+  /* On mouse-over, add a blue background color */
+  .container:hover input ~ .checkmark {
+    background-color: rgb(32, 168, 209);
+  }
+  
+  /* When the checkbox is checked, add a green background */
+  .container input:checked ~ .checkmark {
+    background-color: greenyellow;
+  }
+  
+  .checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 5.5px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .container1 {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 15px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container1 input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: greenyellow;
+    border-radius: 100%;
+    border: solid black;
+    border-width: 1px;
+  }
+
+/* On mouse-over, add a blue background color */
+.container1:hover input ~ .checkmark1 {
+    background-color: rgb(32, 168, 209);
+  }
+  
+  /* When the checkbox is checked, add a white background */
+  .container1 input:checked ~ .checkmark1 {
+    background-color: white;
+  }
+  
+  .checkmark1::after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container1 input ~ .checkmark1:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container1 .checkmark1:after {
+    left: 5.5px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .tooltip-example {
+    text-align: center;
+    padding: 0 50px;
+  }
+  .tooltip-example [tooltip] {
+    display: inline-block;
+    margin: 50px 20px;
+    width: 180px;
+    height: 50px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    line-height: 50px;
+    text-align: center;
+  }
+  .ng-tooltip {
+    position: absolute;
+    max-width: 150px;
+    font-size: 14px;
+    text-align: center;
+    color: #f8f8f2;
+    padding: 3px 8px;
+    background: #282a36;
+    border-radius: 4px;
+    z-index: 1000;
+    opacity: 0;
+  }
+  .ng-tooltip:after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+  }
+  .ng-tooltip-top:after {
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-color: black transparent transparent transparent;
+  }
+  .ng-tooltip-bottom:after {
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-color: transparent transparent black transparent;
+  }
+  .ng-tooltip-left:after {
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-color: transparent transparent transparent black;
+  }
+  .ng-tooltip-right:after {
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-color: transparent black transparent transparent;
+  }
+  .ng-tooltip-show {
+    opacity: 1;
+  }

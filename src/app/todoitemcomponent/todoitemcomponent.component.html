@@ -1,0 +1,26 @@
+<div class="todos">
+    <mat-form-field class="task-name" appearance="fill">
+        <mat-label>Nazwa taska</mat-label>
+        <input matInput type="text" #todo name="todo" [(ngModel)]="taskName" (keyup.enter)="addTodo(taskName)">
+    </mat-form-field>
+    <button mat-button (click)="addTodo(taskName)">Add</button>
+    <p></p>
+    <label>Do zrobienia</label>
+    <p></p>
+    <div class="todo" *ngFor="let todo of todos;">
+        <label class="container" *ngIf="todo.done===false">
+            <input type="checkbox" id="checkbox1" (click)="setDone(todo)"><span class="checkmark"></span>{{todo.name}}
+            <button mat-button class="remove-button" (click)="delete(todo)">Remove</button>
+        </label>
+    </div>
+    <p></p>
+    <label>Zrobione</label>
+    <p></p>
+    <div class="done" *ngFor="let todo of (todos | filterTasksDone);">
+        <label class="container1" tooltip="Zrobione dnia {{todo.doneCreated | date:'mediumDate'}}" placement="bottom" delay="500">
+            <input type="checkbox" id="checkbox2" (click)="setUndone(todo)"><span class="checkmark1"></span>{{todo.name}}
+            <button mat-button class="remove1-button" (click)="delete(todo)">Remove</button>
+        </label>
+    </div>
+    <app-notifications [notifications]="notifications"></app-notifications>
+</div>
